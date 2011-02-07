@@ -1,6 +1,6 @@
 
 
-package agiligent {
+package agiligent.cheers {
 
 import java.io.File
 import junit.framework._
