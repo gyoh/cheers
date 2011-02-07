@@ -16,4 +16,6 @@ class LiftProject(info: ProjectInfo) extends DefaultWebProject(info) {
     "junit" % "junit" % "4.5" % "test->default",
     "org.scala-tools.testing" %% "specs" % "1.6.6" % "test->default"
   ) ++ super.libraryDependencies
+
+  override def scanDirectories = Nil
 }

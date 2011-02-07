@@ -3,7 +3,7 @@
 package bootstrap.liftweb
 
 import net.liftweb._
-import http.{LiftRules, NotFoundAsTemplate, ParsePath}
+import http._
 import sitemap.{SiteMap, Menu, Loc}
 import util.{ NamedPF }
 
@@ -14,6 +14,9 @@ class Boot {
   
     // where to search snippet
     LiftRules.addToPackages("agiligent.cheers")
+
+    // set Lift to full HTML5 support
+    //LiftRules.htmlProperties.default.set((r: Req) =>new Html5Properties(r.userAgent))
 
     // build sitemap
     val entries = List(Menu("Home") / "index") :::
@@ -28,7 +31,6 @@ class Boot {
     
     // set character encoding
     LiftRules.early.append(_.setCharacterEncoding("UTF-8"))
-    
-    
+
   }
 }
