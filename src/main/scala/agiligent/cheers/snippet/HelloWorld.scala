@@ -1,4 +1,5 @@
-package agiligent.cheers.snippet
+package agiligent.cheers {
+package snippet {
 
 import xml.NodeSeq
 import net.liftweb.util.Helpers._
@@ -17,3 +18,5 @@ class HelloWorld {
       "time" -> (new _root_.java.util.Date).toString,
       "hello" -> "Hello World!")
 }
+
+}}
