@@ -36,7 +36,7 @@ class Boot extends Loggable {
 
     // automatically create the tables
     Schemifier.schemify(true, Schemifier.infoF _,
-      Beer, Brewery)
+      Beer, Brewery, User)
 
     // set Lift to full HTML5 support
     //LiftRules.htmlProperties.default.set((r: Req) =>new Html5Properties(r.userAgent))

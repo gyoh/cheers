@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7be4315-d7bb-4468-b694-999e53de8148" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/admin/images/current.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/admin/images/header-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/admin/images/header-bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/admin/beers.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/admin/breweries.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/admin/css/coolblue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/admin/css/enhancements.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/admin/css/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/admin/css/screen.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/admin/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/admin/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/templates-hidden/admin.html" />
+    <list default="true" id="e7be4315-d7bb-4468-b694-999e53de8148" name="Default" comment="Added html files for admin site.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" afterPath="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" />
     </list>
     <ignored path="cheers.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,19 +71,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Boot.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Boot.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="85" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.0">
+            <state line="72" column="85" selection-start="2555" selection-end="2555" vertical-scroll-proportion="0.86871165">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="217" selection-end="217" vertical-scroll-proportion="0.075566754">
+            <state line="5" column="0" selection-start="217" selection-end="217" vertical-scroll-proportion="-2.857143">
               <folding />
             </state>
           </provider>
@@ -103,7 +92,16 @@
       <file leaf-file-name="Brewery.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/agiligent/cheers/model/Brewery.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="37" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
+            <state line="48" column="0" selection-start="1436" selection-end="1436" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/agiligent/cheers/model/User.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="59" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -133,7 +131,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/main/scala/agiligent/cheers/model/Member.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/agiligent/cheers/model/Brewery.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/agiligent/cheers/model/Beer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/agiligent/cheers/model/User.scala" />
@@ -148,6 +145,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/admin/login.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/breweries.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/index.html" />
+        <option value="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" />
       </list>
     </option>
   </component>
@@ -808,7 +806,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more model classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added html files for admin site." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -825,6 +823,7 @@
     <MESSAGE value="Added hello world snippet." />
     <MESSAGE value="Added model class." />
     <MESSAGE value="Added more model classes." />
+    <MESSAGE value="Added html files for admin site." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -837,13 +836,6 @@
     <entry file="file://$PROJECT_DIR$/project/build/Project.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="13" selection-end="13" vertical-scroll-proportion="0.014723927">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/agiligent/cheers/model/User.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="154" selection-start="863" selection-end="863" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -883,13 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/breweries.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="71" selection-end="71" vertical-scroll-proportion="-1.7142857">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/templates-hidden/admin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="85" selection-start="330" selection-end="330" vertical-scroll-proportion="-3.4285715">
@@ -911,9 +896,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/agiligent/cheers/model/Brewery.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="37" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
+        <state line="8" column="0" selection-start="142" selection-end="142" vertical-scroll-proportion="0.1209068">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/breweries.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="71" selection-end="71" vertical-scroll-proportion="0.04534005">
           <folding />
         </state>
       </provider>
@@ -925,23 +917,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/login.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="142" selection-end="142" vertical-scroll-proportion="0.1209068">
+        <state line="5" column="0" selection-start="217" selection-end="217" vertical-scroll-proportion="-2.857143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/agiligent/cheers/model/Brewery.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1436" selection-end="1436" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/agiligent/cheers/model/User.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="59" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="85" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="217" selection-end="217" vertical-scroll-proportion="0.075566754">
+        <state line="72" column="85" selection-start="2555" selection-end="2555" vertical-scroll-proportion="0.86871165">
           <folding />
         </state>
       </provider>
