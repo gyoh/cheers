@@ -3,40 +3,40 @@ package model {
 
 import net.liftweb.common.{Full,Box,Empty,Failure}
 import net.liftweb.sitemap.Loc._
-import scala.xml.NodeSeq
 import net.liftweb.mapper._
+import scala.xml.NodeSeq
 
-class Beer extends LongKeyedMapper[Beer] with IdPK with CreatedUpdated {
+class Brewery extends LongKeyedMapper[Brewery]
+  with IdPK with OneToMany[Long, Brewery] with CreatedUpdated {
 
-  def getSingleton = Beer
+  def getSingleton = Brewery
 
   // fields
   object name extends MappedString(this, 150)
-  object description extends MappedText(this)
+  object telephone extends MappedString(this, 30)
+  object email extends MappedEmail(this, 200)
+  object address extends MappedText(this)
 
   // relationships
-  object brewery extends LongMappedMapper(this, Brewery) {
-    override def dbColumnName = "brewery_id"
-    override def validSelectValues =
-      Full(Brewery.findMap(OrderBy(Brewery.name, Ascending)) {
-        case b: Brewery => Full(b.id.is -> b.name.is)
-      })
-  }
+  object beers extends MappedOneToMany(Beer, Beer.brewery,
+    OrderBy(Beer.name, Ascending))
+      with Owned[Beer]
+      with Cascade[Beer]
+
 }
 
-object Beer extends Beer
-  with LongKeyedMetaMapper[Beer]
-  with CRUDify[Long, Beer] {
+object Brewery extends Brewery
+  with LongKeyedMetaMapper[Brewery]
+  with CRUDify[Long, Brewery] {
 
-  override def dbTableName = "beers"
-
-  override def fieldOrder = List(name,description)
+  override def dbTableName = "breweries"
+  override def fieldOrder = name :: email :: address :: telephone :: Nil
 
   // crudify
   override def pageWrapper(body: NodeSeq) =
     <lift:surround with="admin" at="content">{body}</lift:surround>
   override def calcPrefix = List("admin",_dbTableNameLC)
-  override def displayName = "Beer"
+  override def displayName = "Brewery"
   override def showAllMenuLocParams = LocGroup("admin") :: Nil
   override def createMenuLocParams = LocGroup("admin") :: Nil
   override def viewMenuLocParams = LocGroup("admin") :: Nil
