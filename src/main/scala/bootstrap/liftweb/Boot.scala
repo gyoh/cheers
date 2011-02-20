@@ -10,7 +10,7 @@ import net.liftweb.sitemap.Loc._
 import net.liftweb.mapper.{DB,Schemifier,DefaultConnectionIdentifier,StandardDBVendor,MapperRules}
 
 // app imports
-import agiligent.cheers.model.{Beer,Brewery,User}
+import agiligent.cheers.model.{Beer,Brewery,User,Venue}
 // import agiligent.cheers.lib.{Helpers}
 
 
@@ -36,7 +36,7 @@ class Boot extends Loggable {
 
     // automatically create the tables
     Schemifier.schemify(true, Schemifier.infoF _,
-      Beer, Brewery, User)
+      Beer, Brewery, User, Venue)
 
     // set Lift to full HTML5 support
     //LiftRules.htmlProperties.default.set((r: Req) =>new Html5Properties(r.userAgent))
@@ -52,7 +52,8 @@ class Boot extends Loggable {
       Menu("Beer Detail") / "beer" >> LocGroup("public") >> Hidden,
       Menu("Admin") / "admin" / "index" >> LocGroup("admin"),
       Menu("Breweries") / "admin" / "breweries" >> LocGroup("admin") submenus(Brewery.menus : _*),
-      Menu("Beer Admin") / "admin" / "beers" >> LocGroup("admin") submenus(Beer.menus : _*)
+      Menu("Beer Admin") / "admin" / "beers" >> LocGroup("admin") submenus(Beer.menus : _*),
+      Menu("Venue Admin") / "admin" / "venues" >> LocGroup("admin") submenus(Venue.menus : _*)
     ) ::: User.menus
 
     LiftRules.uriNotFound.prepend(NamedPF("404handler"){
