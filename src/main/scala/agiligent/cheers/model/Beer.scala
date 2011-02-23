@@ -24,6 +24,9 @@ class Beer extends LongKeyedMapper[Beer]
         case b: Brewery => Full(b.id.is -> b.name.is)
       })
   }
+
+  // helper: get all the cheers for this beer
+  def cheers = Cheers.findAll(By(Cheers.beer, this.id), OrderBy(Cheers.id, Descending))
 }
 
 object Beer extends Beer

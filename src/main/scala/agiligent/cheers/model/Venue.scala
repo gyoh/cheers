@@ -18,6 +18,9 @@ class Venue extends LongKeyedMapper[Venue]
   object longitude extends MappedDouble(this);
   object woeid extends MappedLong(this);
 
+  // helper: get all the cheers for this venue
+  def cheers = Cheers.findAll(By(Cheers.venue, this.id), OrderBy(Cheers.id, Descending))
+
 }
 
 object Venue extends Venue

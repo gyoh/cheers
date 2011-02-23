@@ -40,6 +40,10 @@ class User extends MegaProtoUser[User]
     override def textareaCols = 50
     override def displayName = "Bio"
   }
+
+  // helper: get all the cheers for this user
+  def cheers = Cheers.findAll(By(Cheers.user, this.id), OrderBy(Cheers.id, Descending))
+
 }
 
 }}
