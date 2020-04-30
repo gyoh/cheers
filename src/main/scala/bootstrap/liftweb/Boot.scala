@@ -38,9 +38,6 @@ class Boot extends Loggable {
     Schemifier.schemify(true, Schemifier.infoF _,
       Beer, Brewery, User, Venue)
 
-    // set Lift to full HTML5 support
-    //LiftRules.htmlProperties.default.set((r: Req) =>new Html5Properties(r.userAgent))
-
     // build sitemap
 //    val entries = List(Menu("Home") / "index") :::
 //                  Nil
@@ -66,9 +63,12 @@ class Boot extends Loggable {
     // setup the load pattern
     S.addAround(DB.buildLoanWrapper)
     
-    // set character encoding
+    // force the request to be UTF-8
     LiftRules.early.append(_.setCharacterEncoding("UTF-8"))
 
+    // use HTML5 for rendering
+    LiftRules.htmlProperties.default.set((r: Req) =>
+      new Html5Properties(r.userAgent))
   }
 
   object Database extends StandardDBVendor(
